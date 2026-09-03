@@ -198,10 +198,9 @@
   .about { display: grid; grid-template-columns: 120px 1fr; gap: 28px; align-items: start; }
   .about__portrait {
     width: 120px; height: 120px; border-radius: 50%;
-    background: linear-gradient(160deg, var(--accent-soft), var(--moss-soft));
+    object-fit: cover;
     border: 1px solid var(--line);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.7rem; color: var(--ink-soft); text-align: center; padding: 8px;
+    box-shadow: var(--shadow);
   }
   .about__body p { color: var(--ink-soft); font-size: 0.95rem; }
   .about__body p:first-child { color: var(--ink); }
@@ -436,12 +435,11 @@
     <p class="section__eyebrow">このサロンについて</p>
     <h2 class="section__title display">声と、物語と、対話の伴走者</h2>
     <div class="about">
-      <div class="about__portrait">プロフィール<br>写真</div>
+      <img class="about__portrait" src="assets/profile.jpg" alt="心の声の専門家 プロフィール写真">
       <div class="about__body">
-        <p>はじめまして。「心の声の専門家」を主宰しております、<span class="placeholder-flag">［お名前］</span>です。</p>
-        <p>これまで話し方や伝え方に悩む方々の声に耳を傾けてきた中で気づいたのは、「声」にはその人自身がまだ言葉にできていない気持ちや状態が、驚くほど正直に表れているということでした。</p>
-        <p>声を分析し、整え、絵本という物語を通してその奥にある想いをほどいていく――そんな一つひとつの対話を大切にしながら、皆さんが自分らしい声を取り戻し、望む関係や未来へ一歩踏み出すお手伝いをしています。</p>
-        <p class="placeholder-flag">［資格・実績・経歴などがあればここに追記してください］</p>
+        <p>はじめまして。「心の声の専門家」を主宰しております、<span class="placeholder-flag">［お名前］</span>です。声解析士マスターインストラクターとして活動しています。</p>
+        <p>私自身、HSP（繊細さん）として、周囲の期待や評価に縛られ、子育てへの不安や自信のなさに悩んだ時期がありました。絵本、心理学、マヤ暦、そして声解析との出会いを通して「自分の中に答えがある」と実感したことが、今の活動の原点です。</p>
+        <p>求人広告会社ではライティングと営業を経験し、九州支社売上1位を達成。その後、物流コンサルティング会社で営業課長として人事・営業・新規事業に携わりました。ビジネスの現場と、心に寄り添う専門知識の両面から、その人らしい魅力が伝わる言葉と声をサポートしています。</p>
       </div>
     </div>
   </div>
@@ -470,7 +468,7 @@
       </details>
       <details class="faq-item">
         <summary>お支払い方法を教えてください。</summary>
-        <p class="placeholder-flag">［対応する支払い方法（銀行振込・クレジットカード等）を入れてください］</p>
+        <p>お支払いはゆうちょ銀行へのお振込みでお願いしております。詳しい口座情報は、お申し込み後に個別にご案内いたします。恐れ入りますが、振込手数料はお客様のご負担でお願いいたします。</p>
       </details>
     </div>
   </div>
