@@ -95,6 +95,19 @@
   .btn--ghost { background: transparent; border: 1px solid var(--line); color: var(--ink); padding: 11px 25px; }
   .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
+  @keyframes furufuru {
+    0%, 88%, 100% { transform: translateX(0) rotate(0deg); }
+    90% { transform: translateX(-3px) rotate(-4deg); }
+    91.5% { transform: translateX(3px) rotate(4deg); }
+    93% { transform: translateX(-3px) rotate(-3deg); }
+    94.5% { transform: translateX(2px) rotate(3deg); }
+    96% { transform: translateX(-1px) rotate(-1.5deg); }
+    97.5% { transform: translateX(1px) rotate(1.5deg); }
+  }
+  .btn--wobble { display: inline-block; transform-origin: 50% 100%; animation: furufuru 3.4s ease-in-out infinite; }
+  .btn--wobble:hover, .btn--wobble:focus-visible { animation-play-state: paused; }
+  @media (prefers-reduced-motion: reduce) { .btn--wobble { animation: none; } }
+
   /* ---------- Hero ---------- */
   .hero { padding: 68px 0 30px; }
   .hero__eyebrow { font-size: 0.78rem; letter-spacing: 0.32em; color: var(--accent); margin: 0 0 18px; }
@@ -251,11 +264,11 @@
     <h1 class="hero__title display">声が変わる。<br>内面が変わる。<br><em>未来が、変わっていく。</em></h1>
     <p class="hero__lede">声解析 × 声の調律 × 絵本セラピー × カウンセリング ―― 70分のセッションで、声にあらわれる「いまの自分」と向き合い、調律と対話でこれからを描いていきます。</p>
     <div class="hero__ctas">
-      <a class="btn btn--primary" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener">無料相談・お申し込み</a>
+      <a class="btn btn--primary btn--wobble" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener">無料相談・お申し込み</a>
       <a class="btn btn--ghost" href="#pricing">料金を見る</a>
     </div>
     <div class="hero__meta">
-      <span>1回70分・対面／オンライン</span>
+      <span>1回70分・オンライン（Zoom）中心</span>
       <span>月1回ペースの継続コース</span>
     </div>
     <figure class="wave-figure">
@@ -353,7 +366,7 @@
         </div>
       </li>
     </ol>
-    <p class="steps__total">合計 約70分／対面・オンライン対応</p>
+    <p class="steps__total">合計 約70分／オンライン（Zoom）中心</p>
   </div>
 </section>
 
@@ -397,7 +410,7 @@
           <li>まずは今の自分の状態を知りたい方に</li>
           <li>継続前に、相性を確かめたい方に</li>
         </ul>
-        <a class="btn btn--ghost plan__cta" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener">申し込む</a>
+        <a class="btn btn--ghost plan__cta btn--wobble" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener">申し込む</a>
       </div>
       <div class="plan">
         <p class="plan__name">6回コース（半年間）</p>
@@ -409,7 +422,7 @@
           <li>思考・感情の「いつものパターン」に気づく</li>
           <li>向き合いたいテーマがすでにある方に</li>
         </ul>
-        <a class="btn btn--ghost plan__cta" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener">申し込む</a>
+        <a class="btn btn--ghost plan__cta btn--wobble" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener">申し込む</a>
       </div>
       <div class="plan plan--featured">
         <span class="plan__badge">おすすめ</span>
@@ -423,7 +436,7 @@
           <li>毎月伴走してもらえる安心感の中で変化していく</li>
         </ul>
         <p class="plan__gift">＋ 誕生月に特別セッションを1回プレゼント</p>
-        <a class="btn btn--primary plan__cta" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener">申し込む</a>
+        <a class="btn btn--primary plan__cta btn--wobble" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener">申し込む</a>
       </div>
     </div>
     <p class="disclaimer">※効果や変化の感じ方には個人差があります。収入や交際・婚活の成果など特定の結果をお約束するものではありません。</p>
@@ -452,7 +465,7 @@
     <div class="faq-list">
       <details class="faq-item">
         <summary>オンラインでも受けられますか？</summary>
-        <p>はい、対面・オンラインどちらにも対応しています。ご都合に合わせてお選びください。</p>
+        <p>Zoomでのオンラインセッションが基本となります。お申し込み後、日程を調整の上で実施いたします。</p>
       </details>
       <details class="faq-item">
         <summary>絵本や声について、知識や経験は必要ですか？</summary>
@@ -478,7 +491,7 @@
   <div class="wrap">
     <h2 class="cta__title display">まずは、あなたの「いまの声」から。</h2>
     <p class="cta__body">声解析 × 声の調律 × 絵本セラピー × カウンセリングのセッションに、ご興味を持っていただきありがとうございます。まずはスポットセッションから、お気軽にお問い合わせください。</p>
-    <a class="btn btn--primary" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener" style="padding:16px 44px;">LINEで無料相談・お申し込み</a>
+    <a class="btn btn--primary btn--wobble" href="https://lin.ee/nZv03o7" target="_blank" rel="noopener" style="padding:16px 44px;">LINEで無料相談・お申し込み</a>
     <div class="cta__contact">
       <span><a href="https://lin.ee/nZv03o7" target="_blank" rel="noopener">LINE公式アカウントはこちら</a></span>
       <span>Mail：<a href="mailto:ehon.nakagawa@gmail.com">ehon.nakagawa@gmail.com</a></span>
