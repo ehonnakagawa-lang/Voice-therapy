@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>心の声の専門家｜声解析 × 声の調律 × 絵本セラピー × カウンセリング</title>
+<meta name="description" content="声解析・声の調律・絵本セラピー・カウンセリングを組み合わせた70分のセッション。声の変化から、内面・対話・現実の関係性まで、ゆっくりと整えていきます。">
+<meta property="og:title" content="心の声の専門家｜声のセラピーサロン">
+<meta property="og:description" content="声解析 × 声の調律 × 絵本セラピー × カウンセリング。70分のセッションで、いまの自分と向き合う。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232B2438'/%3E%3Cpath d='M8 34h6l4-14 8 26 6-20 4 8h8' fill='none' stroke='%23C4485B' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #2B2438;
+    --ink-soft: #5B5468;
+    --paper: #FBF6F1;
+    --paper-raised: #FFFFFF;
+    --accent: #C4485B;
+    --accent-soft: #E8B4A8;
+    --accent-wash: #F6E3DF;
+    --moss: #6B7C5E;
+    --moss-soft: #E1E7DA;
+    --gold: #C89B4A;
+    --line: rgba(43, 36, 56, 0.13);
+    --shadow: 0 20px 44px -28px rgba(43, 36, 56, 0.35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #F2EDE8; --ink-soft: #C9C2D6; --paper: #1E1826; --paper-raised: #271F30;
+      --accent: #E38A9B; --accent-soft: #5A3A3D; --accent-wash: #362229;
+      --moss: #9BB088; --moss-soft: #2B3427; --gold: #D9B36B;
+      --line: rgba(242, 237, 232, 0.15); --shadow: 0 20px 44px -24px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #F2EDE8; --ink-soft: #C9C2D6; --paper: #1E1826; --paper-raised: #271F30;
+    --accent: #E38A9B; --accent-soft: #5A3A3D; --accent-wash: #362229;
+    --moss: #9BB088; --moss-soft: #2B3427; --gold: #D9B36B;
+    --line: rgba(242, 237, 232, 0.15); --shadow: 0 20px 44px -24px rgba(0,0,0,0.6);
+  }
+  :root[data-theme="light"] {
+    --ink: #2B2438; --ink-soft: #5B5468; --paper: #FBF6F1; --paper-raised: #FFFFFF;
+    --accent: #C4485B; --accent-soft: #E8B4A8; --accent-wash: #F6E3DF;
+    --moss: #6B7C5E; --moss-soft: #E1E7DA; --gold: #C89B4A;
+    --line: rgba(43, 36, 56, 0.13); --shadow: 0 20px 44px -28px rgba(43, 36, 56, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "游ゴシック体", "Yu Gothic Medium", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    line-height: 1.9;
+    -webkit-font-smoothing: antialiased;
+  }
+  .display { font-family: "游明朝体", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", Georgia, serif; }
+  a { color: inherit; }
+  img { max-width: 100%; }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .wrap--wide { max-width: 960px; }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-header__inner {
+    max-width: 960px; margin: 0 auto; padding: 16px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .wordmark {
+    font-size: 0.98rem; letter-spacing: 0.18em; font-weight: 600;
+    display: flex; align-items: center; gap: 10px; text-decoration: none;
+  }
+  .wordmark::before { content: ""; width: 20px; height: 1px; background: var(--gold); }
+  .site-nav { display: flex; align-items: center; gap: 24px; }
+  .site-nav__links { display: flex; gap: 20px; font-size: 0.86rem; }
+  .site-nav__links a { text-decoration: none; color: var(--ink-soft); }
+  .site-nav__links a:hover { color: var(--accent); }
+  @media (max-width: 640px) { .site-nav__links { display: none; } }
+
+  .btn {
+    display: inline-block; border: none; cursor: pointer; text-decoration: none;
+    font-size: 0.88rem; letter-spacing: 0.05em; padding: 12px 26px;
+  }
+  .btn--primary { background: var(--accent); color: var(--paper-raised); }
+  .btn--primary:hover { filter: brightness(1.05); }
+  .btn--ghost { background: transparent; border: 1px solid var(--line); color: var(--ink); padding: 11px 25px; }
+  .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 68px 0 30px; }
+  .hero__eyebrow { font-size: 0.78rem; letter-spacing: 0.32em; color: var(--accent); margin: 0 0 18px; }
+  .hero__title { font-size: clamp(2rem, 6.4vw, 3.1rem); line-height: 1.5; margin: 0 0 20px; text-wrap: balance; font-weight: 600; }
+  .hero__title em { font-style: normal; color: var(--accent); }
+  .hero__lede { max-width: 48ch; color: var(--ink-soft); font-size: 1.02rem; margin: 0 0 28px; }
+  .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+  .hero__meta { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 0.86rem; color: var(--ink-soft); }
+  .hero__meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero__meta span::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); display: inline-block; }
+
+  .wave-figure { margin-top: 40px; width: 100%; }
+  .wave-figure svg { width: 100%; height: auto; display: block; }
+  .wave-figure figcaption { display: flex; justify-content: space-between; font-size: 0.74rem; letter-spacing: 0.14em; color: var(--ink-soft); margin-top: 6px; }
+  #wave-main { fill: none; stroke: var(--accent); stroke-width: 2.4; stroke-linecap: round; }
+  #wave-echo { fill: none; stroke: var(--moss); stroke-width: 1.4; stroke-linecap: round; opacity: 0.45; }
+
+  /* ---------- Section shell ---------- */
+  section { padding: 60px 0; border-top: 1px solid var(--line); }
+  .hero { border-top: none; }
+  .section__eyebrow { font-size: 0.76rem; letter-spacing: 0.28em; color: var(--moss); margin: 0 0 12px; }
+  .section__title { font-size: clamp(1.4rem, 3.6vw, 1.9rem); margin: 0 0 16px; text-wrap: balance; }
+  .section__intro { color: var(--ink-soft); max-width: 54ch; margin: 0 0 32px; }
+
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+  /* ---------- Concerns (pain points) ---------- */
+  .concerns { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .concerns li {
+    background: var(--paper-raised); border: 1px solid var(--line); border-left: 3px solid var(--moss);
+    padding: 16px 20px; font-size: 0.95rem; color: var(--ink-soft);
+  }
+  .concerns li strong { color: var(--ink); font-weight: 600; }
+  .bridge-line { margin-top: 28px; font-size: 1rem; color: var(--ink); }
+  .bridge-line strong { color: var(--accent); }
+
+  /* ---------- Flow diagram ---------- */
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; align-items: stretch; }
+  .flow__node { position: relative; padding: 8px 14px 0; text-align: center; }
+  .flow__icon {
+    width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 50%;
+    background: var(--paper-raised); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow);
+  }
+  .flow__icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.6; }
+  .flow__label { font-size: 0.86rem; font-weight: 600; margin-bottom: 4px; }
+  .flow__sub { font-size: 0.74rem; color: var(--ink-soft); line-height: 1.6; }
+  .flow__arrow { position: absolute; top: 23px; right: -8px; width: 16px; height: 16px; color: var(--gold); }
+  .flow__node:last-child .flow__arrow { display: none; }
+  @media (max-width: 620px) {
+    .flow { grid-template-columns: 1fr; gap: 28px; }
+    .flow__arrow { top: auto; bottom: -22px; left: 50%; right: auto; transform: translateX(-50%) rotate(90deg); }
+  }
+  .outcomes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+  .outcome { font-size: 0.78rem; padding: 6px 14px; border: 1px solid var(--line); color: var(--ink-soft); background: var(--moss-soft); border-radius: 2px; }
+
+  /* ---------- Personas ---------- */
+  .personas { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .persona { background: var(--paper-raised); border: 1px solid var(--line); padding: 22px 22px 20px; border-left: 3px solid var(--accent); }
+  .persona__tag { font-size: 0.72rem; letter-spacing: 0.1em; color: var(--accent); margin: 0 0 8px; }
+  .persona__body { font-size: 0.92rem; color: var(--ink-soft); margin: 0; }
+  @media (max-width: 560px) { .personas { grid-template-columns: 1fr; } }
+
+  /* ---------- Session steps ---------- */
+  .steps { list-style: none; margin: 0; padding: 0; position: relative; }
+  .steps::before { content: ""; position: absolute; left: 21px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+  .step { display: flex; gap: 20px; padding: 0 0 30px; position: relative; }
+  .step:last-child { padding-bottom: 0; }
+  .step__num {
+    flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--paper-raised);
+    border: 1px solid var(--line); display: flex; align-items: center; justify-content: center;
+    font-family: "游明朝体", "Yu Mincho", serif; font-size: 1rem; color: var(--accent); z-index: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .step__title { font-weight: 600; margin: 6px 0 4px; }
+  .step__time { font-size: 0.78rem; color: var(--gold); letter-spacing: 0.06em; }
+  .step__body { color: var(--ink-soft); font-size: 0.92rem; margin: 4px 0 0; }
+  .steps__total { margin: 20px 0 0 64px; font-size: 0.86rem; color: var(--ink-soft); }
+
+  /* ---------- Pricing ---------- */
+  .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+  .plan { background: var(--paper-raised); border: 1px solid var(--line); padding: 26px 22px; display: flex; flex-direction: column; gap: 14px; height: 100%; }
+  .plan--featured { border-color: var(--accent); box-shadow: var(--shadow); position: relative; }
+  .plan__badge { position: absolute; top: -12px; left: 22px; background: var(--accent); color: var(--paper-raised); font-size: 0.7rem; letter-spacing: 0.08em; padding: 4px 10px; }
+  .plan__name { font-size: 0.82rem; letter-spacing: 0.06em; color: var(--ink-soft); }
+  .plan__price { font-family: "游明朝体", "Yu Mincho", serif; font-size: clamp(1.5rem, 5vw, 1.9rem); font-variant-numeric: tabular-nums; }
+  .plan__price small { font-size: 0.6em; font-weight: 400; color: var(--ink-soft); margin-left: 4px; }
+  .plan__per { font-size: 0.78rem; color: var(--moss); font-variant-numeric: tabular-nums; }
+  .plan hr { border: none; border-top: 1px solid var(--line); margin: 2px 0; }
+  .plan__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+  .plan__list li { font-size: 0.84rem; color: var(--ink-soft); padding-left: 16px; position: relative; }
+  .plan__list li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 6px; height: 1px; background: var(--gold); }
+  .plan__gift { margin-top: auto; padding-top: 12px; border-top: 1px dashed var(--line); font-size: 0.8rem; color: var(--accent); }
+  .plan__cta { margin-top: 4px; }
+  @media (max-width: 700px) { .pricing { grid-template-columns: 1fr; } .plan--featured { order: -1; } }
+  .disclaimer { font-size: 0.76rem; color: var(--ink-soft); margin-top: 24px; line-height: 1.7; }
+
+  /* ---------- About ---------- */
+  .about { display: grid; grid-template-columns: 120px 1fr; gap: 28px; align-items: start; }
+  .about__portrait {
+    width: 120px; height: 120px; border-radius: 50%;
+    background: linear-gradient(160deg, var(--accent-soft), var(--moss-soft));
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.7rem; color: var(--ink-soft); text-align: center; padding: 8px;
+  }
+  .about__body p { color: var(--ink-soft); font-size: 0.95rem; }
+  .about__body p:first-child { color: var(--ink); }
+  @media (max-width: 540px) { .about { grid-template-columns: 1fr; } .about__portrait { width: 88px; height: 88px; } }
+
+  /* ---------- FAQ ---------- */
+  .faq-list { display: flex; flex-direction: column; gap: 10px; }
+  .faq-item { background: var(--paper-raised); border: 1px solid var(--line); }
+  .faq-item summary {
+    cursor: pointer; padding: 18px 20px; font-weight: 600; font-size: 0.95rem;
+    list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: "+"; font-size: 1.2rem; color: var(--accent); flex: none; transition: transform 0.25s ease; }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item summary:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+  .faq-item p { margin: 0; padding: 0 20px 20px; color: var(--ink-soft); font-size: 0.9rem; }
+
+  /* ---------- Footer / CTA ---------- */
+  .cta { text-align: center; padding-top: 64px; }
+  .cta__title { font-size: clamp(1.3rem, 4vw, 1.8rem); margin: 0 0 14px; text-wrap: balance; }
+  .cta__body { color: var(--ink-soft); max-width: 44ch; margin: 0 auto 28px; }
+  .cta__contact { margin-top: 26px; font-size: 0.84rem; color: var(--ink-soft); display: flex; flex-direction: column; gap: 4px; }
+  .cta__note { margin-top: 40px; font-size: 0.72rem; color: var(--ink-soft); opacity: 0.7; }
+
+  .placeholder-flag { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="wordmark display" href="#hero">心の声の専門家</a>
+    <nav class="site-nav">
+      <div class="site-nav__links">
+        <a href="#service">セッション内容</a>
+        <a href="#pricing">料金</a>
+        <a href="#faq">よくある質問</a>
+      </div>
+      <a class="btn btn--primary" href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap" id="hero">
+  <header class="hero">
+    <p class="hero__eyebrow display">VOICE THERAPY SALON</p>
+    <h1 class="hero__title display">声が変わる。<br>内面が変わる。<br><em>未来が、変わっていく。</em></h1>
+    <p class="hero__lede">声解析 × 声の調律 × 絵本セラピー × カウンセリング ―― 70分のセッションで、声にあらわれる「いまの自分」と向き合い、調律と対話でこれからを描いていきます。</p>
+    <div class="hero__ctas">
+      <a class="btn btn--primary" href="#contact">無料相談・お申し込み</a>
+      <a class="btn btn--ghost" href="#pricing">料金を見る</a>
+    </div>
+    <div class="hero__meta">
+      <span>1回70分・対面／オンライン</span>
+      <span>月1回ペースの継続コース</span>
+    </div>
+    <figure class="wave-figure">
+      <svg viewBox="0 0 800 140" preserveAspectRatio="none" aria-hidden="true">
+        <path id="wave-echo" d=""></path>
+        <path id="wave-main" d=""></path>
+      </svg>
+      <figcaption><span>揺れる、いまの声</span><span>整っていく、これからの声</span></figcaption>
+    </figure>
+  </header>
+</div>
+
+<section class="reveal" id="concerns">
+  <div class="wrap">
+    <p class="section__eyebrow">こんなお悩み、ありませんか？</p>
+    <h2 class="section__title display">"伝わらないもどかしさ"は、声から生まれている</h2>
+    <ul class="concerns">
+      <li><strong>声が小さい・通らない</strong>と言われることが多い</li>
+      <li>人前で話すと緊張して、<strong>本来の自分</strong>を出せない</li>
+      <li>職場や家庭で、<strong>本音をうまく伝えられない</strong></li>
+      <li>婚活で、<strong>会話が続かない・自分らしさが伝わらない</strong></li>
+      <li>理由のわからない、<strong>漠然とした自信のなさ</strong>がずっと消えない</li>
+    </ul>
+    <p class="bridge-line">その"生きづらさ"の多くは、<strong>「声」</strong>からほどいていくことができます。</p>
+  </div>
+</section>
+
+<section class="reveal" id="flow">
+  <div class="wrap wrap--wide">
+    <p class="section__eyebrow">変化のロジック</p>
+    <h2 class="section__title display">声の変化は、静かに現実を動かす</h2>
+    <p class="section__intro">セッションで起きているのは、次の4段階の連なりです。声という入口から、暮らしの中の関係性まで、変化は順番に広がっていきます。</p>
+    <div class="flow">
+      <div class="flow__node">
+        <div class="flow__icon"><svg viewBox="0 0 24 24"><path d="M3 12h3l2-7 4 14 3-10 2 3h4"/></svg></div>
+        <p class="flow__label">声の変化</p>
+        <p class="flow__sub">聞かれる声、伝わる声へ</p>
+        <svg class="flow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+      </div>
+      <div class="flow__node">
+        <div class="flow__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8a4 4 0 0 1 0 8"/></svg></div>
+        <p class="flow__label">内面の変化</p>
+        <p class="flow__sub">気づきと、静かな自信</p>
+        <svg class="flow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+      </div>
+      <div class="flow__node">
+        <div class="flow__icon"><svg viewBox="0 0 24 24"><path d="M4 6h11v7H8l-4 4V6Z"/><path d="M20 10v8l-3-3h-4"/></svg></div>
+        <p class="flow__label">対話の変化</p>
+        <p class="flow__sub">伝え方、聞き方が変わる</p>
+        <svg class="flow__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16m-6-6 6 6-6 6"/></svg>
+      </div>
+      <div class="flow__node">
+        <div class="flow__icon"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/></svg></div>
+        <p class="flow__label">現実の変化</p>
+        <p class="flow__sub">関係性・仕事・出会いへ</p>
+      </div>
+    </div>
+    <div class="outcomes" aria-label="変化がおよぶ領域">
+      <span class="outcome">人間関係</span>
+      <span class="outcome">プレゼン力</span>
+      <span class="outcome">収入UPを目指す方も</span>
+      <span class="outcome">婚活中の方も</span>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="service">
+  <div class="wrap">
+    <p class="section__eyebrow">セッションの流れ</p>
+    <h2 class="section__title display">70分でたどる、ひとつの物語</h2>
+    <p class="section__intro">声を分析し、整え、物語を通して心をほどく。3つのアプローチを1回のセッションに凝縮しています。</p>
+    <ol class="steps">
+      <li class="step">
+        <div class="step__num display">一</div>
+        <div>
+          <p class="step__title">声解析セッション</p>
+          <p class="step__time">20分</p>
+          <p class="step__body">声を録音・分析し、いまの心身の状態やエネルギーの偏りを可視化します。</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step__num display">二</div>
+        <div>
+          <p class="step__title">声の調律・トレーニング</p>
+          <p class="step__time">20分</p>
+          <p class="step__body">分析結果をもとに、呼吸や発声を整えながら「伝わる声」へと調律していきます。</p>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step__num display">三</div>
+        <div>
+          <p class="step__title">絵本セラピー・カウンセリング</p>
+          <p class="step__time">30分</p>
+          <p class="step__body">テーマに合う絵本を通して気づきを引き出し、言葉にしながら次の一歩へ落とし込みます。</p>
+        </div>
+      </li>
+    </ol>
+    <p class="steps__total">合計 約70分／対面・オンライン対応</p>
+  </div>
+</section>
+
+<section class="reveal" id="for-you">
+  <div class="wrap">
+    <p class="section__eyebrow">こんな方へ</p>
+    <h2 class="section__title display">向き合いたいテーマは、人それぞれ</h2>
+    <div class="personas">
+      <div class="persona">
+        <p class="persona__tag">BUSINESS</p>
+        <p class="persona__body">会議やプレゼンで声が通らない、説得力を感じられないビジネスパーソンへ。</p>
+      </div>
+      <div class="persona">
+        <p class="persona__tag">婚活</p>
+        <p class="persona__body">初対面の会話が続かない、自分らしさが伝わらないと感じる婚活中の方へ。</p>
+      </div>
+      <div class="persona">
+        <p class="persona__tag">RELATIONSHIP</p>
+        <p class="persona__body">職場や家庭で本音を伝えるのが苦手、すれ違いが多いと感じる方へ。</p>
+      </div>
+      <div class="persona">
+        <p class="persona__tag">SELF</p>
+        <p class="persona__body">漠然とした自信のなさの根っこを、じっくり知りたい方へ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="pricing">
+  <div class="wrap wrap--wide">
+    <p class="section__eyebrow">料金</p>
+    <h2 class="section__title display">続けるほど、変化は積み重なる</h2>
+    <p class="section__intro">単発セッションのほか、月1回ペースで通う2つの継続コースをご用意しています。</p>
+    <div class="pricing">
+      <div class="plan">
+        <p class="plan__name">スポットセッション</p>
+        <p class="plan__price">¥11,000<small>／回</small></p>
+        <p class="plan__per">お試し・単発利用に</p>
+        <hr>
+        <ul class="plan__list">
+          <li>まずは今の自分の状態を知りたい方に</li>
+          <li>継続前に、相性を確かめたい方に</li>
+        </ul>
+        <a class="btn btn--ghost plan__cta" href="#contact">申し込む</a>
+      </div>
+      <div class="plan">
+        <p class="plan__name">6回コース（半年間）</p>
+        <p class="plan__price">¥60,000</p>
+        <p class="plan__per">月々¥10,000換算・月1回×6ヶ月</p>
+        <hr>
+        <ul class="plan__list">
+          <li>半年分の声を記録し、変化を実感</li>
+          <li>思考・感情の「いつものパターン」に気づく</li>
+          <li>向き合いたいテーマがすでにある方に</li>
+        </ul>
+        <a class="btn btn--ghost plan__cta" href="#contact">申し込む</a>
+      </div>
+      <div class="plan plan--featured">
+        <span class="plan__badge">おすすめ</span>
+        <p class="plan__name">12回コース（1年間）</p>
+        <p class="plan__price">¥120,000</p>
+        <p class="plan__per">月々¥10,000換算・月1回×12ヶ月</p>
+        <hr>
+        <ul class="plan__list">
+          <li>1年分の声の記録という、自分だけの成長記録</li>
+          <li>12冊の絵本との出会いで多面的な自己理解</li>
+          <li>毎月伴走してもらえる安心感の中で変化していく</li>
+        </ul>
+        <p class="plan__gift">＋ 誕生月に特別セッションを1回プレゼント</p>
+        <a class="btn btn--primary plan__cta" href="#contact">申し込む</a>
+      </div>
+    </div>
+    <p class="disclaimer">※効果や変化の感じ方には個人差があります。収入や交際・婚活の成果など特定の結果をお約束するものではありません。</p>
+  </div>
+</section>
+
+<section class="reveal" id="about">
+  <div class="wrap">
+    <p class="section__eyebrow">このサロンについて</p>
+    <h2 class="section__title display">声と、物語と、対話の伴走者</h2>
+    <div class="about">
+      <div class="about__portrait">プロフィール<br>写真</div>
+      <div class="about__body">
+        <p>声・絵本・対話を通じて、これまで多くの方の「伝わらないもどかしさ」に寄り添ってきました。</p>
+        <p class="placeholder-flag">［ここにプロフィール文章・資格・実績・想いなどを入れてください］</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="faq">
+  <div class="wrap">
+    <p class="section__eyebrow">よくあるご質問</p>
+    <h2 class="section__title display">申し込む前に</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>オンラインでも受けられますか？</summary>
+        <p>はい、対面・オンラインどちらにも対応しています。ご都合に合わせてお選びください。</p>
+      </details>
+      <details class="faq-item">
+        <summary>絵本や声について、知識や経験は必要ですか？</summary>
+        <p>いいえ、知識や経験は一切不要です。絵本を読んだり声を出したりすることに慣れていない方も、安心してご参加いただけます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>どのくらいのペースで通えばいいですか？</summary>
+        <p>月1回のペースを基本としています。ご自身の状況に合わせて、6回コース・12回コースからお選びいただけます。</p>
+      </details>
+      <details class="faq-item">
+        <summary>継続コースの途中でキャンセルはできますか？</summary>
+        <p class="placeholder-flag">［キャンセルポリシー・返金規定を入れてください］</p>
+      </details>
+      <details class="faq-item">
+        <summary>お支払い方法を教えてください。</summary>
+        <p class="placeholder-flag">［対応する支払い方法（銀行振込・クレジットカード等）を入れてください］</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="cta" id="contact">
+  <div class="wrap">
+    <h2 class="cta__title display">まずは、あなたの「いまの声」から。</h2>
+    <p class="cta__body">声解析 × 声の調律 × 絵本セラピー × カウンセリングのセッションに、ご興味を持っていただきありがとうございます。まずはスポットセッションから、お気軽にお問い合わせください。</p>
+    <a class="btn btn--primary" href="#" style="padding:16px 44px;">お申し込み・お問い合わせ</a>
+    <div class="cta__contact">
+      <span>LINE公式アカウント：@your_line_id</span>
+      <span>Mail：your@email.com</span>
+    </div>
+    <p class="cta__note">© 心の声の専門家 ／ 本ページはひな形です。プロフィール・お問い合わせ先・ポリシー欄を差し替えてご利用ください。</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var W = 800, H = 140, mid = H / 2;
+    function smoothstep(t) { return t * t * (3 - 2 * t); }
+    function buildPath(id, ampBase, seed) {
+      var pts = [];
+      var steps = 90;
+      for (var i = 0; i <= steps; i++) {
+        var x = (i / steps) * W;
+        var t = i / steps;
+        var blend = smoothstep(t);
+        var jagged = Math.sin(t * 26 + seed) * 0.6 + Math.sin(t * 61 + seed * 1.7) * 0.3 + Math.sin(t * 13 + seed * 0.4) * 0.4;
+        var calm = Math.sin(t * 7.5 + seed * 0.6);
+        var wave = jagged * (1 - blend) + calm * blend;
+        var amp = ampBase * (1 - blend * 0.35);
+        var y = mid + wave * amp;
+        pts.push((i === 0 ? "M" : "L") + x.toFixed(1) + "," + y.toFixed(1));
+      }
+      var el = document.getElementById(id);
+      if (el) el.setAttribute("d", pts.join(" "));
+    }
+    buildPath("wave-main", 34, 2.1);
+    buildPath("wave-echo", 22, 5.4);
+
+    var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!prefersReduced && "IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+    } else {
+      document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-visible"); });
+    }
+  })();
+</script>
+</body>
+</html>
